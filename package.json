@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "test": "jest",
+    "test:component": "jest -c test/component/jest.component.config.js",
     "test:watch": "jest --watch",
     "build": "next build",
     "start": "next start -p $PORT"
