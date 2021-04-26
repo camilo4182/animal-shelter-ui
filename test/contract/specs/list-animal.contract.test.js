@@ -20,7 +20,7 @@ describe('Given an animal service', () => {
                         gender: Matchers.term({generate: "Female", matcher: "Female|Male"}),
                         isVaccinated: Matchers.boolean(true),
                         name: Matchers.string("Manchas"),
-                        vaccines: Matchers.eachLike(["rabia"], {min: 1})
+                        vaccines: Matchers.eachLike("rabia", {min: 1})
                     }, {min: 1})
                 }
             });
