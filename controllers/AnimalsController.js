@@ -3,10 +3,10 @@ import axios from 'axios';
 export const AnimalController = {
     register(animal) {
         return axios({
-            url: `animal`,
+            method: 'POST',
             baseURL: process.env.API,
-            data: animal,
-            method: 'POST'
+            url: 'animals',
+            data: animal
         })
     },
     list() {
@@ -14,6 +14,13 @@ export const AnimalController = {
             method: 'GET',
             baseURL: process.env.API,
             url: 'animals'
+        });
+    },
+    delete(animal_name) {
+        return axios({
+            method: 'DELETE',
+            baseURL: process.env.API,
+            url: `animals/${animal_name}`
         });
     }
 }

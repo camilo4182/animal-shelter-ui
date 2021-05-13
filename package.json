@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "test:component": "jest -c test/component/jest.config.component.js",
-    "test:contract": "jest -c test/contract/jest.config.contract.js",
+    "test:contract": "jest -c test/contract/jest.contract.config.js",
     "publish:contract": "node ./test/contract/config/publish.js",
     "build": "next build",
     "start": "next start -p $PORT"
