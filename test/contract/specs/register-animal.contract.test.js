@@ -18,19 +18,21 @@ describe('Given an animal service', () => {
                 withRequest: {
                     method: 'POST',
                     path: '/animals',
-                    headers:{
-                        'Content-Type': 'application/json'
-                    },
                     body: animal
                 },
                 willRespondWith: {
                     status: 201,
-                    body: Matchers.like({
-                        name: "Pelusa",
-                        breed: "Siames",
-                        gender: "Male",
-                        isVaccinated: true
-                    })
+                    headers:{
+                        'Content-Type': 'application/json'
+                    },
+                    body: Matchers.eachLike(
+                        {
+                            name: Matchers.like('manchas'),
+                            breed: Matchers.like("Bengali"),
+                            gender: Matchers.like("Female"),
+                            vaccinated: Matchers.boolean(true)
+                        }
+                    )
                 }
             });
         });
