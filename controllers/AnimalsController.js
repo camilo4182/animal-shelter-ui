@@ -7,7 +7,7 @@ export const AnimalController = {
             baseURL: process.env.API,
             url: 'animals',
             data: animal
-        })
+        });
     },
     list() {
         return axios({

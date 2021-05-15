@@ -33,7 +33,6 @@ describe('Animal Service', () => {
         test('should return the correct data', async () => {
             const response = await AnimalController.list();
             expect(response.data).toMatchSnapshot();
-            
             await provider.verify()
         });
 
