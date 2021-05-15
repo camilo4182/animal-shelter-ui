@@ -25,7 +25,7 @@ describe('Given an animal service', () => {
                     headers:{
                         'Content-Type': 'application/json'
                     },
-                    body: Matchers.eachLike(
+                    body: Matchers.somethingLike(
                         {
                             name: Matchers.like('manchas'),
                             breed: Matchers.like("Bengali"),
